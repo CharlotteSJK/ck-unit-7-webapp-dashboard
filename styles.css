@@ -1,0 +1,32 @@
+.grid-container {
+    display: grid;
+    grid-template-rows: 50px, 50px, auto;
+    grid-template-areas: 
+		"header" 
+		"nav" 
+		"main";
+}
+
+header {
+    background-color: blueviolet;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
