@@ -1,15 +1,27 @@
+const notification = document.getElementsByClassName('bell-icon');  
 const alertBanner = document.getElementById('alert');  
 const trafficCanvas = document.getElementById('traffic-chart'); 
-const dailyCanvas = document.getElementById('daily-chart');
+const dailyCanvas = document.getElementById('bar-chart');
 const mobileCanvas = document.getElementById('mobile-chart');
 const user = document.getElementById('userField');
 const message = document.getElementById('messageField');
 const send = document.getElementById('send');
 
+// Notification section
+
+notification.innerHTML =
+`
+<div class="dropdown">
+  <img onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+     </div>
+</div>
+`
 
 // Alert Banner section
-
-// HTML for the alert banner
 
 alertBanner.innerHTML =
 `
@@ -22,7 +34,8 @@ to complete</p>
 
 alertBanner.style.backgroundColor = '#7477BF';
 alertBanner.style.borderRadius = '5px';
-alertBanner.style.padding = '5px';
+alertBanner.style.padding = '8px';
+alertBanner.style.margin = '15px 20px 5px 20px';
 alertBanner.style.color = '#fff';
 
 alertBanner.addEventListener('click', e => {
@@ -47,7 +60,8 @@ let trafficData = {
     pointBackgroundColor: '#fff',
     pointBorderColor: '#7477BF',
     pointBorderWidth: 1,
-    pointStyle: 'circle'
+    pointStyle: 'circle',
+    pointRadius: 6
     }]
     };
 
@@ -106,7 +120,6 @@ let dailyChart = new Chart(dailyCanvas, {
     options: dailyOptions
     });
 
-
 // Doughnut Chart
 
 const mobileData = {
@@ -139,7 +152,6 @@ let mobileChart = new Chart(mobileCanvas, {
     options: mobileOptions
     });
 
-
 // Messaging section
 
 send.addEventListener('click', () => {
@@ -154,3 +166,7 @@ send.addEventListener('click', () => {
     alert(`Message successfully sent to: ${user.value}`);
     }
     });
+
+    // Autocomplete function
+
+    const names = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
