@@ -45,56 +45,56 @@ let trafficData2 = {
 };
  
  //  Weekly
-  let trafficData3 = {
-     labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6"],
-     datasets: [{
-      data: [1600, 1450, 1500, 1700, 1350, 2000],
-      backgroundColor: 'rgba(116, 119, 191, .3)',
-      borderColor: '#7477BF',
-      borderWidth: 1,
-      lineTension: 0,
-      pointBackgroundColor: '#fff',
-      pointBorderColor: '#7477BF',
-      pointBorderWidth: 1,
-      pointStyle: 'circle',
-      pointRadius: 6
-      }]
-  };
+let trafficData3 = {
+    labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6"],
+    datasets: [{
+    data: [1600, 1450, 1500, 1700, 1350, 2000],
+    backgroundColor: 'rgba(116, 119, 191, .3)',
+    borderColor: '#7477BF',
+    borderWidth: 1,
+    lineTension: 0,
+    pointBackgroundColor: '#fff',
+    pointBorderColor: '#7477BF',
+    pointBorderWidth: 1,
+    pointStyle: 'circle',
+    pointRadius: 6
+    }]
+};
  
  // Monthly
-  let trafficData4 = {
-     labels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
-     datasets: [{
-      data: [1750, 1400, 1600, 1250, 2000, 1950, 1750, 1100, 1200, 1600, 1250, 1550],
-      backgroundColor: 'rgba(116, 119, 191, .3)',
-      borderColor: '#7477BF',
-      borderWidth: 1,
-      lineTension: 0,
-      pointBackgroundColor: '#fff',
-      pointBorderColor: '#7477BF',
-      pointBorderWidth: 1,
-      pointStyle: 'circle',
-      pointRadius: 6
-    }]
-  };
- 
+let trafficData4 = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+    datasets: [{
+    data: [1750, 1400, 1600, 1250, 2000, 1950, 1750, 1100, 1200, 1600, 1250, 1550],
+    backgroundColor: 'rgba(116, 119, 191, .3)',
+    borderColor: '#7477BF',
+    borderWidth: 1,
+    lineTension: 0,
+    pointBackgroundColor: '#fff',
+    pointBorderColor: '#7477BF',
+    pointBorderWidth: 1,
+    pointStyle: 'circle',
+    pointRadius: 6
+  }]
+};
 
-  let trafficOptions = {
-      aspectRatio: 2.5,
-      animation: {
-      duration: 0
-      },
-      scales: {
-      yAxes: [{
-      ticks: {
-      beginAtZero:true
-      }
-      }]
-      },
-      legend : {
-      display: false
-      }
-      };
+
+let trafficOptions = {
+    aspectRatio: 2.5,
+    animation: {
+    duration: 0
+    },
+    scales: {
+    yAxes: [{
+    ticks: {
+    beginAtZero:true
+    }
+    }]
+    },
+    legend : {
+    display: false
+    }
+    };
 
 let trafficChart = new Chart(trafficCanvas, {
   type: 'line',

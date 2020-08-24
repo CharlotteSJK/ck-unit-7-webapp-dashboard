@@ -48,24 +48,6 @@ p {
     margin: 0;
 }
 
-.profile-image {
-    border-radius: 50%;
-    max-width: 10%;
-    margin-right: 15px;
-}
-
-.line-chart,
-.bar-chart,
-.mobile-chart,
-.social-media,
-.member-info,
-.new-members,
-.activity-info,
-.message-container {
-    border-bottom: solid 1px;
-
-}
-
 /* Header */
 
 header {
@@ -100,8 +82,8 @@ header h1 {
     margin: 0 12px;
 }
 
-header h3 {
-    font-size: 11px;
+.my-name {
+    font-size: 14px;
     font-weight: bold;
     margin: 0;
 }
@@ -113,12 +95,12 @@ header h3 {
     float: right;
 }
   
-  .bell-icon:hover {
+.bell-icon:hover {
     transform: scale(1.3);
     cursor: pointer; 
   }
   
-  .notification .badge {
+.notification .badge {
     position: absolute;
     top: -5px;
     right: 4px;
@@ -130,12 +112,12 @@ header h3 {
 
   /* Dropdown menu */
 
-  .notification {
+.notification {
     position: relative;
     display: inline-block;
   }
 
-  .dropdown-content {
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #fff;
@@ -147,7 +129,6 @@ header h3 {
     right: 2%;
   }
   
-  /* Links inside the dropdown */
 .dropdown-content a {
     color: #78CF82;
     padding: 12px 16px;
@@ -155,23 +136,26 @@ header h3 {
     display: block;
 }
 
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #F5F5F5}
+.dropdown-content a:hover {
+    background-color: #F5F5F5
+}
 
- /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+ /* Show the dropdown menu with JS */
+.show {
+    display:block;
+}
 
 
 /* Navigation */
 
-.main-nav {
+.navigation {
     grid-area: navigation;
     background-color: #483D8B;
     display: inline;
     text-align: center;
 }
 
-.main-nav img {
+.navigation img {
     max-width: 7%;
     margin: 10px; 
 }
@@ -247,6 +231,17 @@ main {
 
 
 /* Charts */
+
+.line-chart,
+.bar-chart,
+.mobile-chart,
+.social-media,
+.member-info,
+.new-members,
+.activity-info,
+.message-container {
+    border-bottom: solid 1px;
+}
 
 canvas {
     margin: auto;
@@ -329,6 +324,12 @@ canvas {
     border-bottom: solid 1px;
 }
 
+.profile-image {
+    border-radius: 50%;
+    max-width: 10%;
+    margin-right: 15px;
+}
+
 .new-members a,
 .arrow {
     color: #7477BF;
@@ -371,12 +372,9 @@ form {
 
 .ui-autocomplete-input {
     list-style-type: none;
-}
-
-/* How to style the autocomplete options? */
+}                               /* How to style the autocomplete options? */
 
 .timezone-field {
-    background-image: url(images/images/iconfinder_chevron-right_4115223.png);
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: right;
@@ -384,10 +382,7 @@ form {
     max-width: 92%;
     text-align: center;
     margin: 0 20px;
-}
-
-::placeholder {
-    color: #DCDCDC;
+    color: #696969;
 }
 
 .user-search {
@@ -406,8 +401,11 @@ form {
 .toggle {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin: 20px 0 25px 20px;
+}
+
+.space {
+    padding-right: 33px;
 }
 
 .button-primary {
@@ -449,8 +447,8 @@ form {
     position: relative;
     display: inline-block;
     width: 80px;
-    height: 34px;
-    margin-right: 20px;
+    height: 38px;
+    margin: 0 30px;
     color: white;
   }
   
@@ -473,6 +471,7 @@ form {
     background-color: #696969;
     -webkit-transition: .4s;
     transition: .4s;
+    border: solid 2px #DCDCDC;
   }
   
   .slider:before {
@@ -480,13 +479,13 @@ form {
     content: "";
     height: 26px;
     width: 26px;
-    left: 22px;
+    left: 6px;
     bottom: 4px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
   }
-  
+
   input:checked + .slider {
     background-color: #7477BF;
   }
@@ -496,12 +495,17 @@ form {
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(38px);
+    -ms-transform: translateX(38px);
+    transform: translateX(38px);
+  }
+
+  .off {
+    color: white;
   }
   
   /* Rounded sliders */
+
   .slider.round {
     border-radius: 34px;
   }
@@ -509,7 +513,6 @@ form {
   .slider.round:before {
     border-radius: 50%;
   }
-
 
 /* Media Queries */
 
@@ -533,7 +536,7 @@ form {
         max-width: 8%;
     }
 
-    .main-nav img {
+    .navigation img {
         max-width: 6%;
         margin: 10px 15px;
     }
@@ -547,9 +550,9 @@ form {
     .twitter-container,
     .facebook-container ,
     .google-container {
-    padding: 15px 0 15px 15px;
-    width: 90%;
-    margin: auto;
+        padding: 15px 0 15px 15px;
+        width: 90%;
+        margin: auto;
     }
 
     .social-fig {
@@ -580,7 +583,7 @@ form {
         grid-template-areas:
             "header header"
             "navigation mainContent";      
-     }
+    }
 
     .header-image {
         border-radius: 50%;
@@ -595,14 +598,20 @@ form {
         width: 40%;
     }
 
-    nav {
+    .navigation {
         padding-top: 10px;
+        height: 100%;       /*this does not work*/
     }
 
-    .main-nav img {
-        max-width: 50%;
-        margin: 20px auto; 
+    .navigation img {
+        display: block;
+        max-width: 40%;
+        margin: 30px auto; 
+    }
 
+    .traffic-nav-link {
+        font-size: 16px; 
+        padding: 0 10px;
     }
 
     .bar-chart,
@@ -632,9 +641,9 @@ form {
     }
 
     .profile-image {
-    border-radius: 50%;
-    max-width: 8%;
-    margin-right: 15px;
+        border-radius: 50%;
+        max-width: 8%;
+        margin-right: 15px;
 }
        
     .social-image {
@@ -642,11 +651,14 @@ form {
     }
 
     .timezone-field {
-        max-width: 94%;
-        margin-top: 8px;
+        max-width: 92%;
     }
 
     .settings-button {
         margin-top: 24px;
+    }
+
+    .button-disabled {
+        margin-left: 20px;
     }
 }
