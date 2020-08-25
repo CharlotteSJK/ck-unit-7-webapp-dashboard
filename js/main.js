@@ -14,20 +14,20 @@ const cancel = document.getElementById('cancel');
 
 function showDropdown() {
     document.getElementById("dropdown").classList.toggle("show");
-  }
+}
 
-  window.onclick = function(e) {
-    if (!e.target.matches('.bell-icon')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
+window.onclick = function(e) {
+  if (!e.target.matches('.bell-icon')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
       }
     }
-  }
+  }   
+}
 
 // Alert Banner section
 
@@ -47,31 +47,29 @@ alertBanner.style.margin = '15px 20px 5px 20px';
 alertBanner.style.color = '#fff';
 
 alertBanner.addEventListener('click', e => {
-    const element = e.target;
-    if (element.classList.contains("alert-banner-close")) {
-    alertBanner.style.display = "none"; 
-    }
+  const element = e.target;
+  if (element.classList.contains("alert-banner-close")) {
+  alertBanner.style.display = "none"; 
+  }
 });
-
-
 
 // Messaging section
 
 send.addEventListener('click', () => {
-    if (user.value === "" && message.value === "") {
-    alert("Please fill out user and message fields before sending");
-    } else if (user.value === "" ) {
-    alert("Please fill out user field before sending");
-    } else if (message.value === "" ) {
-    alert("Please fill out message field before sending");
-    } else {
-    alert(`Message successfully sent to: ${user.value}`);
-    }
-    });
+  if (user.value === "" && message.value === "") {
+  alert("Please fill out user and message fields before sending");
+  } else if (user.value === "" ) {
+  alert("Please fill out user field before sending");
+  } else if (message.value === "" ) {
+  alert("Please fill out message field before sending");
+  } else {
+  alert(`Message successfully sent to: ${user.value}`);
+  }
+});
 
 // Autocomplete function
 
-$( function() {
+$(function() {
   var tags = [
     "Victoria Chambers",
     "Dale Byrd",
@@ -82,7 +80,7 @@ $( function() {
   $( "#tags" ).autocomplete({
     source: tags
   });
-} );
+});
 
 //Local storage
 
@@ -99,8 +97,8 @@ const loadSettings = () => {
   } else {
     switch2.checked = (checkedProfile === 'false');
   }
-  timezone.value = localStorage.getItem('savedTimezone');
-  }
+  timezone.selectedIndex = localStorage.getItem('savedTimezone');
+}
 
 function testStorage() {
    const test = 'test';
@@ -110,25 +108,28 @@ function testStorage() {
        return true;
      } catch(e) {
        return false;
- }}
+      }
+    }
 
-if(testStorage() === true) {
-save.addEventListener("click", () => {
-  if (timezone.value === "") {
-    alert("Select a Timezone");
-} else {
-    localStorage.setItem('checkedEmail', switch1.checked);
-    localStorage.setItem('checkedProfile', switch2.checked);
-    localStorage.setItem('savedTimezone', timezone.value);
-    alert("Your settings have been saved"); 
-}});
+  if(testStorage() === true) {
+  save.addEventListener("click", () => {
+    if (timezone.selectedIndex === 0) {
+      alert("Select a Timezone");
+  } else {
+      localStorage.setItem('checkedEmail', switch1.checked);
+      localStorage.setItem('checkedProfile', switch2.checked);
+      localStorage.setItem('savedTimezone', timezone.selectedIndex);
+      alert("Your settings have been saved"); 
+    }
+  });
 
-cancel.addEventListener("click", () => {
-  localStorage.setItem('checkedEmail', switch1.checked = false)
-  localStorage.setItem('checkedProfile', switch2.checked = false)
-  localStorage.setItem('savedTimezone', timezone.value = "")
-  alert("Your preferred settings have been cancelled"); 
-});
+  cancel.addEventListener("click", () => {
+    localStorage.setItem('checkedEmail', switch1.checked = false)
+    localStorage.setItem('checkedProfile', switch2.checked = false)
+    localStorage.setItem('savedTimezone', timezone.selectedIndex = 0);
+    alert("Your preferred settings have been cancelled"); 
+  });
 
-loadSettings();
+  loadSettings();
 }
+

@@ -180,7 +180,6 @@ header h1 {
 /* Main Header */
 
 main {
-    height: 100vh;
     grid-area: mainContent;
     display: grid;
     margin: 0;
@@ -368,11 +367,12 @@ form {
     padding: 10px;
     margin-bottom: 20px;
     background-color: whitesmoke;
+    color: #696969;
 }
 
-.ui-autocomplete-input {
-    list-style-type: none;
-}                               /* How to style the autocomplete options? */
+.ui-menu-item {
+    color: #7477BF;
+}                             
 
 .timezone-field {
     background-size: 30px;
@@ -396,12 +396,6 @@ form {
 .settings-content {
     margin: 15px;
     padding: 5px 0;
-}
-
-.toggle {
-    display: flex;
-    align-items: center;
-    margin: 20px 0 25px 20px;
 }
 
 .space {
@@ -442,7 +436,14 @@ form {
 
 /* Toggle switches */
 
+.toggle {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 25px 20px;
+}
+
 /* The switch - the box around the slider */
+
 .switch {
     position: relative;
     display: inline-block;
@@ -453,6 +454,7 @@ form {
   }
   
   /* Hide default HTML checkbox */
+
   .switch input {
     opacity: 0;
     width: 0;
@@ -500,8 +502,11 @@ form {
     transform: translateX(38px);
   }
 
-  .off {
+  .off, .on {
     color: white;
+    position: relative;
+    top: 25%;
+    margin: 0 6px;
   }
   
   /* Rounded sliders */
@@ -600,13 +605,12 @@ form {
 
     .navigation {
         padding-top: 10px;
-        height: 100%;       /*this does not work*/
     }
 
     .navigation img {
         display: block;
         max-width: 40%;
-        margin: 30px auto; 
+        margin: 40px auto; 
     }
 
     .traffic-nav-link {
@@ -617,10 +621,8 @@ form {
     .bar-chart,
     .mobile-chart,
     .social-media,
-    .member-info,
     .new-members,
-    .activity-info,
-    .message-container {
+    .activity-info {
         border-bottom: solid 1px;
     }
 
