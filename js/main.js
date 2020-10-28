@@ -40,7 +40,7 @@ to complete</p>
 </div>
 `
 
-alertBanner.style.backgroundColor = '#7477BF';
+alertBanner.style.backgroundColor = '#0077B6';
 alertBanner.style.borderRadius = '5px';
 alertBanner.style.padding = '8px';
 alertBanner.style.margin = '15px 20px 5px 20px';

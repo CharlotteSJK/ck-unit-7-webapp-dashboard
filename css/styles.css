@@ -52,7 +52,7 @@ p {
 
 header {
     grid-area: header;
-    background-color: #7477BF;
+    background-color: #0077B6;
     color: #fff;
     margin: 0;
     display: flex;
@@ -150,7 +150,7 @@ header h1 {
 
 .navigation {
     grid-area: navigation;
-    background-color: #483D8B;
+    background-color: #023E8A;
     display: inline;
     text-align: center;
 }
@@ -201,7 +201,7 @@ main {
     border-top: 0;
     border-right: 0;
     margin: 0;
-    background-color: #F5F5F5; 
+    background-color: #F7F7F2; 
     flex-grow: 2; 
     }
 
@@ -268,7 +268,7 @@ canvas {
     width: 50%;
     margin: 10px auto;
     padding: 15px;
-    background: whitesmoke;
+    background: #F7F7F2;
 }
 
 .google-container {
@@ -276,7 +276,7 @@ canvas {
 }
 
 .social-text {
-    color: #7477BF;
+    color: #0077B6;
     font-size: 20px;
 }
 
@@ -287,7 +287,7 @@ canvas {
 
 .social-image {
     text-align: center;
-    background-color: #7477BF;
+    background-color: #0077B6;
     border-radius: 50%;
     width: 70px;
     height: 70px;
@@ -331,7 +331,7 @@ canvas {
 
 .new-members a,
 .arrow {
-    color: #7477BF;
+    color: #0077B6;
     text-decoration: none;
 
 }
@@ -366,7 +366,7 @@ form {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    background-color: whitesmoke;
+    background-color: #F7F7F2;
     color: #696969;
 }
 
@@ -405,9 +405,10 @@ form {
 .button-primary {
     padding: 15px;
     border-radius: 5px;
+    border: solid 2px #DCDCDC;
     width: 100%;
     text-transform: uppercase;
-    background-color: #7477BF;
+    background-color: #0077B6;
     color: #fff;
 }
 
@@ -420,6 +421,7 @@ form {
 .button-save,
 .button-disabled {
     padding: 15px;
+    border: solid 2px #DCDCDC;
     border-radius: 5px;
     width: 47%;
     text-transform: uppercase;
@@ -427,7 +429,7 @@ form {
 } 
 
 .button-save {
-    background-color: #7477BF;
+    background-color: #0077B6;
 }
 
 .button-disabled {
@@ -489,11 +491,11 @@ form {
   }
 
   input:checked + .slider {
-    background-color: #7477BF;
+    background-color: #0077B6;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #7477BF;
+    box-shadow: 0 0 1px #0077B6;
   }
   
   input:checked + .slider:before {

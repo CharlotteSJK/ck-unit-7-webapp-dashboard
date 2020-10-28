@@ -15,12 +15,12 @@ const monthly = document.getElementsByClassName('monthly-chart');
     "21-00"],
     datasets: [{
     data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850],
-    backgroundColor: 'rgba(116, 119, 191, .3)',
-    borderColor: '#7477BF',
+    backgroundColor: 'rgba(144, 224, 239, .3)',
+    borderColor: '#48CAE4',
     borderWidth: 1,
     lineTension: 0,
     pointBackgroundColor: '#fff',
-    pointBorderColor: '#7477BF',
+    pointBorderColor: '#48CAE4',
     pointBorderWidth: 1,
     pointStyle: 'circle',
     pointRadius: 6
@@ -32,12 +32,12 @@ let trafficData2 = {
   labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
   datasets: [{
   data: [1340, 1400, 1200, 1850, 1500, 1950, 1650],
-  backgroundColor: 'rgba(116, 119, 191, .3)',
-  borderColor: '#7477BF',
+  backgroundColor: 'rgba(144, 224, 239, .3)',
+  borderColor: '#48CAE4',
   borderWidth: 1,
   lineTension: 0,
   pointBackgroundColor: '#fff',
-  pointBorderColor: '#7477BF',
+  pointBorderColor: '#48CAE4',
   pointBorderWidth: 1,
   pointStyle: 'circle',
   pointRadius: 6
@@ -49,12 +49,12 @@ let trafficData3 = {
     labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6"],
     datasets: [{
     data: [1600, 1450, 1500, 1700, 1350, 2000],
-    backgroundColor: 'rgba(116, 119, 191, .3)',
-    borderColor: '#7477BF',
+    backgroundColor: 'rgba(144, 224, 239, .3)',
+    borderColor: '#48CAE4',
     borderWidth: 1,
     lineTension: 0,
     pointBackgroundColor: '#fff',
-    pointBorderColor: '#7477BF',
+    pointBorderColor: '#48CAE4',
     pointBorderWidth: 1,
     pointStyle: 'circle',
     pointRadius: 6
@@ -66,12 +66,12 @@ let trafficData4 = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
     datasets: [{
     data: [1750, 1400, 1600, 1250, 2000, 1950, 1750, 1100, 1200, 1600, 1250, 1550],
-    backgroundColor: 'rgba(116, 119, 191, .3)',
-    borderColor: '#7477BF',
+    backgroundColor: 'rgba(144, 224, 239, .3)',
+    borderColor: '#48CAE4',
     borderWidth: 1,
     lineTension: 0,
     pointBackgroundColor: '#fff',
-    pointBorderColor: '#7477BF',
+    pointBorderColor: '#48CAE4',
     pointBorderWidth: 1,
     pointStyle: 'circle',
     pointRadius: 6
@@ -142,7 +142,7 @@ const dailyData = {
   datasets: [{
   label: '# of Hits',
   data: [75, 115, 175, 125, 225, 200, 100],
-  backgroundColor: '#7477BF',
+  backgroundColor: '#48CAE4',
   borderWidth: 1
   }]
   };
@@ -176,9 +176,9 @@ const mobileData = {
   data: [2000, 550, 500],
   borderWidth: 0,
   backgroundColor: [
-  '#7477BF',
+  '#48CAE4',
   '#78CF82',
-  '#51B6C8'
+  '#2a9d8f'
   ]
   }]
   };
